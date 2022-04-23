@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Сумма отложений</label>
+                <input type="number" class="form-control" id="deposits">
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Процент (%)</label>
+                <input type="number" class="form-control" id="persent">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Кол-во месяцев</label>
+                <input type="number" class="form-control" id="month_amount">
+                </div>
+            <button type="submit" class="btn btn-primary" (click)="calculate()">Расчитать!</button>
+            <label class="form-label ms-5" style="font-size: 1.6rem;"> → </label>
+            <label class="form-label ms-5">Конечная сумма: {{ accumulation }}</label>
+        </form>
+    </div>
+</div>
