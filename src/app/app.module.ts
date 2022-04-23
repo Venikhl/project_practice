@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccumulationComponent } from './accumulation/accumulation.component';
+import { NzCardModule } from 'ng-zorro-antd/card';
 
 registerLocaleData(en);
 
@@ -24,7 +25,8 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzCardModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

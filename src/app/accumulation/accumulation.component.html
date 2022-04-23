@@ -20,4 +20,37 @@
             <label class="form-label ms-5">Конечная сумма: {{ accumulation }}</label>
         </form>
     </div>
+    <div class="row justify-content-md-center mt-5">
+        <h3>Добавить цель накоплений</h3>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Название</label>
+                <input type="text" class="form-control" id="title_goal">
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Цена цели</label>
+                <input type="number" class="form-control" id="cost_goal">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Сумма отложений в месяц</label>
+                <input type="number" class="form-control" id="accumulation_amount_goal">
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="createGoal()">Добавить!</button>
+        </form>
+    </div>
+    <div class="row justify-content-md-center mt-5">
+        <ul>
+            <li *ngFor="let goal of goals">
+              <nz-card style="width:300px;" nzTitle="User:">
+                <p>Name: {{goal?.title}}</p>
+                <p>Цена: {{goal?.cost}}</p>
+                <p>Кол-во месяцев: {{goal?.months_amount}}</p>
+                <p>Отложения: {{goal?.cost}}</p>
+              </nz-card>
+            </li>
+          </ul>
+    </div>
 </div>
